@@ -1,3 +1,4 @@
+/* definição de variáveis CSS para cores, reutilizadas em vários lugares do código */
 :root {
   --background-body: #E5E5E5;
   --background-content: #1D1D1D;
@@ -6,19 +7,23 @@
   --second-color: #89DDFF;
 }
 
-body {
-  margin: 0;
-  font-size: 1rem;
+body { /* estilização para o corpo da página */
+  margin: 0; /* remove a margem padrão do corpo da página */
+  font-size: 1rem; /* define o tamanho da fonte como 1rem */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  /* fonte padrão para os textos */
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-body);
-  color: var(--text-color);
+  /* suaviza o texto em navegadores WebKit e Firefox para melhorar a legibilidade */
+
+  background-color: var(--background-body); /* aplica a cor de fundo definida pela variável "--background-body" */
+  color: var(--text-color); /* define a cor padrão do texto como a variável "--text-color" */
 }
 
-header {
+header { /* estilização do cabeçalho, que é fixo no topo, com uma altura de 3,5rem e uma sombra */
   position: fixed;
   width: 100%;
   height: 3.5rem;
@@ -28,9 +33,9 @@ header {
   color: var(--background-body);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   z-index: 10;
-}
+} 
 
-.header__content {
+.header__content { /* estilização do conteúdo dentro do cabeçalho para ser centralizado, com um layout flexível */
   max-width: 1280px;
   padding: 0 1rem;
   margin: auto;
@@ -41,7 +46,7 @@ header {
   height: 3.5rem;
 }
 
-.logo {
+.logo { /* estilização para a logo, incluindo espaçamento entre os elementos e cor do texto */
   font-size: 20px;
   display: flex;
   gap: 0.5rem;
@@ -55,24 +60,27 @@ main {
   margin-bottom: 3rem;
   margin-top: 4.5rem;
   padding: 2rem;
+  /* define o layout principal, incluindo largura e espaçamento ao redor */
+
   /* background-color: var(--background-content); */
   /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
-  border-radius: 3px;
+
+  border-radius: 3px;  /* aplica bordas arredondadas */
 }
 
-form {
+form { /* define que o formulário ocupará apenas o espaço necessário e será centralizado */
   width: fit-content;
   margin: auto;
 }
 
-input, select {
+input, select { 
   border: none;
   border-radius: 3px;
   padding: 6px;
   margin:  0 6px;
-}
+} /* estiliza os campos de entrada e seleção com bordas arredondadas, padding e espaçamento entre os campos */
 
-h3 {
+h3 { /* centraliza o título h3 e remove a margem superior */
   text-align: center;
   margin-top: 0;
 }
@@ -84,42 +92,42 @@ button {
   cursor: pointer;
   border-radius: 3px;
   font-weight: bold;
-}
+} /* define o estilo dos botões, como cores, bordas arredondadas e peso da fonte */
 
 .buttons {
   width: 100%;
   display: flex;
   justify-content: space-around;
   gap: 0.5rem;
-}
+} /* define um layout flexível para o grupo de botões, com espaçamento uniforme. */
 
 .btn-submit {
   background-color: var(--primary-color);
   padding: 6px 12px;
   cursor: pointer;
   font-weight: bolder;
-}
+} /* estiliza o botão de envio com cor e espaçamento personalizados */
 
 button:hover,
 .btn-submit:hover {
   opacity: 0.8;
-}
+} /* aplica um efeito de opacidade quando o mouse passa sobre os botões */
 
 .all-users {
 margin-top: 3rem;
-}
+} /* define um espaçamento superior para o contêiner de todos os usuários */
 
 .titles,
 .row {
   width: 100%;
   display: flex;
   text-align: center;
-}
+} /* estiliza as linhas de títulos e os dados com um layout flexível e centralizado */
 .titles{
   font-weight: bold;
   background-color: var(--text-color);
   color: var(--background-body);
-}
+} /* estiliza os títulos com um fundo a cor definida em "--background-body" e o texto com a cor "--text-color" */
 
 .titles div,
 .row input,
@@ -127,20 +135,20 @@ margin-top: 3rem;
   .row div{
   width: 20%;
   padding: 0.5rem;
-}
+} /* define a largura de cada célula e o espaçamento interno */
 
 .hide-form {
   display: none;
-}
+} /* esconde o formulário com esta classe */
 
 @media screen and (max-width: 920px) {
   main {
     width: 90%;
   }
-}
+} /* ajusta a largura do conteúdo principal em telas com no máximo 920px de largura */
 
 @media screen and (max-width: 520px) {
   main {
     width: 100%;
   }
-}
+} /* ajusta a largura do conteúdo principal para ocupar toda a tela em dispositivos menores de 520px de largura */
